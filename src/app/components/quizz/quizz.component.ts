@@ -38,13 +38,19 @@ export class QuizzComponent implements OnInit {
     await this.nextQuestion();
   }
 
-  public async nextQuestion() {
+  private async nextQuestion() {
     this.questionIndex! += 1;
 
     if (this.questionMaxIndex! > this.questionIndex!)
       this.selectedQuestion = this.questions![this.questionIndex!];
-    else
+    else {
       this.finished = true;
+      this.selectedAswer = quizzQuestions.results[this.checkResults()]!;
+    }
   }
 
+  private checkResults(): keyof typeof quizzQuestions.results {
+    return this.aswers?.filter(option => option == 'A').length! >= this.aswers?.filter(option => option == 'B').length!
+    ? 'A' : 'B';
+  }
 }

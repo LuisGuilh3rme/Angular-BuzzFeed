@@ -23,7 +23,7 @@
     },
     {
       "id":3,
-      "question": "Qual a sua maior preocupação ao enfretar outro super ser ?",
+      "question": "Qual a sua maior preocupação ao enfrentar outro super ser ?",
       "options":[
         {"id": 1, "name":"Não destruir prédios", "alias":"B"},
         {"id": 2, "name":"Socar a cara do inimigo", "alias":"A"},
